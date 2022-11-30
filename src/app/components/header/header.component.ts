@@ -36,7 +36,6 @@ export class HeaderComponent implements OnInit {
     console.log(screen.availWidth)
   }
 
-
   hideMenuButton(): void{
     const menuButton: HTMLElement | null = document.getElementById('mobile-menu');
     if (menuButton == null)

@@ -1,0 +1,59 @@
+{
+    "logo": "",
+    "bannerBackground": "../../../assets/img/2016-12-05_20.01.40.png",
+
+    "fotoPerfil": "assets/img/Bidoof.png",
+    "nombre": "Deian Teze",
+    "acercaDe": [
+        "Desarrollador web",
+        "Estudiante de Licenciatura en Sistemas"
+    ],
+    "habilidades":[
+        "Programación",
+        "Desarrollo Web",
+        "C#",
+        "Unity"
+    ],
+    
+    "experiencia": [
+        {
+            "empresa": "",
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu mi tristique, cursus arcu at, euismod felis. Maecenas vel elit elementum, fringilla ex eget, molestie leo. Donec commodo eu urna non malesuada. Pellentesque vehicula quam et sodales laoreet. Fusce lobortis est a enim eleifend sollicitudin. Phasellus ac lorem ac mauris rutrum interdum.",
+            "puesto": "trabajo de ejemplo",
+            "inicio": "1099",
+            "fin": "2099"
+        },
+        {
+            "empresa": "",
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu mi tristique, cursus arcu at, euismod felis. Maecenas vel elit elementum, fringilla ex eget, molestie leo. Donec commodo eu urna non malesuada. Pellentesque vehicula quam et sodales laoreet. Fusce lobortis est a enim eleifend sollicitudin. Phasellus ac lorem ac mauris rutrum interdum.",
+            "puesto": "trabajo de ejemplo",
+            "inicio": "1199",
+            "fin": "2099"
+        },
+        {
+            "empresa": "",
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu mi tristique, cursus arcu at, euismod felis. Maecenas vel elit elementum, fringilla ex eget, molestie leo. Donec commodo eu urna non malesuada. Pellentesque vehicula quam et sodales laoreet. Fusce lobortis est a enim eleifend sollicitudin. Phasellus ac lorem ac mauris rutrum interdum.",
+            "puesto": "pasantia",
+            "inicio": "1090",
+            "fin": "2090"
+        }
+    ],
+
+    "educacion": [
+        {
+            "nombre": "ed. secundaria",
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu mi tristique, cursus arcu at, euismod felis. Maecenas vel elit elementum, fringilla ex eget, molestie leo. Donec commodo eu urna non malesuada. Pellentesque vehicula quam et sodales laoreet. Fusce lobortis est a enim eleifend sollicitudin. Phasellus ac lorem ac mauris rutrum interdum.",
+            "inicio": "1099",
+            "fin": "2099"
+        }
+    ],
+
+    "proyectos": [
+        {
+            "nombre": "proyecto de ejemplo",
+            "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu mi tristique, cursus arcu at, euismod felis. Maecenas vel elit elementum, fringilla ex eget, molestie leo. Donec commodo eu urna non malesuada. Pellentesque vehicula quam et sodales laoreet. Fusce lobortis est a enim eleifend sollicitudin. Phasellus ac lorem ac mauris rutrum interdum.",
+            "imagen": "assets/img/Bidoof.png",
+            "link": "/"
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+<section class="contenedor" id="educacion">
+    <h2>Educación</h2>
+
+    <div class="educacion" *ngFor="let ed of educacion">
+        <h3 class="exp-nombre">{{ed.nombre}}</h3>
+        <p class="fecha">{{ed.inicio}} - {{ed.fin}}</p>
+        <p class="exp-descripcion">{{ed.descripcion}}</p>
+    </div>
+</section><!--Educacion-->

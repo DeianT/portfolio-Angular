@@ -1,1 +1,294 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    font-family: Verdana;
+    font-size: 1.8rem;
+    /* background-color: aliceblue; */
+    background: rgb(227,249,255);
+    background: -moz-linear-gradient(180deg, rgba(227,249,255,1) 15%, rgba(240,248,255,1) 66%, rgba(245,234,255,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(227,249,255,1) 15%, rgba(240,248,255,1) 66%, rgba(245,234,255,1) 100%);
+    background: linear-gradient(180deg, rgba(227,249,255,1) 15%, rgba(240,248,255,1) 66%, rgba(245,234,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e3f9ff",endColorstr="#f2e3ff",GradientType=1);
+}
+
+/* Globales */
+img{
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.contenedor{
+    width: 98%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+h2{
+    text-align: center;
+    font-size: 3rem;
+    margin: 3rem 0 0;
+}
+
+h3{
+    font-size: 2.6rem;
+}
+
+/* Mobile Menu */
+#mobile-menu, #cerrar{
+    color: black;
+    display: block;
+    font-size: 2.2rem;
+    padding: 1rem 0;
+    cursor: pointer;
+}
+.barra{
+    overflow: hidden;
+}
+.navegacion-principal{
+    max-height: 0;
+    transition: .5s;
+}
+
+@media (min-width: 768px) {
+    #mobile-menu, #cerrar{
+        display: none!important;
+    }
+    .navegacion-principal{
+        max-height: unset;
+    }
+}
+
+/* Header/nav */
+.barra{
+    background-color: rgb(180, 180, 180);
+    text-align: center;
+}
+nav a{
+    display: block;
+    font-size: 2rem;
+    color: black;
+    font-weight: 600;
+    padding-top: 1rem;
+}
+.logo{
+    margin-left: 2rem;
+}
+
+.banner{
+    /* background-image: url(assets/img/2016-12-05_20.01.40.png); */
+    background-position: center center;
+    background-size: cover;
+    height: 80vh;
+}
+
+@media (min-width: 768px) {
+    .barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    nav{
+        padding: 1.5rem 0;
+    }
+    nav a{
+        display: inline-block;
+        text-align: right;
+        margin-right: 1.5rem;
+        padding: 0;
+    }
+}
+
+/* Presentación */
+.presentacion{
+    margin-top: 2rem;
+    padding: 0 1rem;
+    background-color: darkgray;
+    background: rgb(170,164,151);
+    background: -moz-linear-gradient(135deg, rgba(170,164,151,1) 17%, rgba(209,207,196,1) 92%);
+    background: -webkit-linear-gradient(135deg, rgba(170,164,151,1) 17%, rgba(209,207,196,1) 92%);
+    background: linear-gradient(135deg, rgba(170,164,151,1) 17%, rgba(209,207,196,1) 92%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#aaa497",endColorstr="#d1cfc4",GradientType=1);
+}
+
+.foto-perfil{
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.descripcion{
+    display: inline-block;
+    margin: 0 2rem;
+}
+.nombre{
+    font-size: 3.8rem;
+    margin: 0 0 3rem;
+}
+.acerca-de{
+    font-size: 2.4rem;
+    margin-bottom: 0;
+    position: relative;
+    bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .presentacion{
+        margin: 0;
+        padding: 1rem 2rem 0;
+    }
+    .descripcion{
+        position: relative;
+        bottom: 7rem;
+    }
+}
+
+/* Contacto */
+.contacto{
+    padding: 1rem 2rem 0.5rem;
+}
+.contacto ul{
+    list-style: none;
+    padding-left: 1rem;
+}
+.contacto li{
+    font-size: 2.2rem;
+    margin-top: 2rem;
+}
+.contacto a{
+    color: black;
+}
+.contacto i{
+    margin-right: 1rem;
+}
+
+@media (min-width: 768px) {
+    .contacto li{
+        display: inline-block;
+        margin-right: 2rem;
+    }
+}
+
+/* Experiencia */
+.seccion-exp{
+    
+}
+
+.experiencia{
+    background-color: bisque;
+    border-radius: 20px;
+    padding: 1rem;
+    margin-top: 1rem;
+    border: 2px solid rgb(54, 54, 54);
+}
+.exp-nombre{
+    margin: 1rem 0;
+    display: inline-block;
+}
+.fecha{
+    display: inline;
+    text-align: right;
+    font-size: 2rem;
+    margin-left: 2rem;
+}
+.exp-descripcion{
+    font-size: 2rem;
+}
+
+/* Educación */
+.educacion{
+    padding: 1rem;
+    margin-top: 1rem;
+    background-color: rgb(0, 159, 203);
+    border-radius: 20px;
+    border: 3px solid rgb(255, 255, 255);
+}
+
+/* Proyectos */
+.proyectos{
+    margin-top: 1.5rem;
+}
+.proyectos a{
+    color: black;
+}
+
+.proyecto{
+    border: 1px solid darkgrey;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    background-color: rgb(240, 252, 255);
+}
+.proyecto:last-of-type{
+    margin-bottom: 0;
+}
+
+.imagen-proyecto{
+    width: calc(100% - 4rem);
+    display: block;
+    margin: 0 auto;
+}
+
+.proyecto-nombre{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+@media (min-width: 768px) {
+    .proyectos{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .proyecto{
+        flex-basis: calc(33.3% - 1rem);
+        margin-bottom: 0;
+    }
+    .imagen-proyecto{
+        width: calc(100%);
+    }
+}
+
+.fijo{
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    background-color: rgb(220, 176, 0);
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 2.6rem;
+    color: white;
+}
+@media (min-width: 768px) {
+    .fijo{
+        padding: 1rem 1.52rem;
+    }
+}
+
+/* Footer */
+footer{
+    background-color: black;
+    color: white;
+    margin-top: 3rem;
+}
+footer p{
+    margin: 0;
+}
+.nav-footer{
+    display: none;
+}
+.nav-footer a{
+    color: white;
+}
+@media (min-width: 768px) {
+    .nav-footer{
+        display: flex;
+        justify-content: space-evenly;
+    }
+}

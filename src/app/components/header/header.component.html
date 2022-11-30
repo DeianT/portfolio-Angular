@@ -1,0 +1,15 @@
+<header>
+    <div class="barra">
+        <a href="/" class="logo"><img [src]="miPortfolio.logo" alt="logo"></a>
+
+        <i class="fas fa-ellipsis-v" id="mobile-menu" (click)="hideMenuButton()" (click)="showMenu()"></i>
+        <nav id="nav" class="navegacion-principal">
+            <a routerLink="/" (click)="showMenuButton()" (click)="hideMenu()">Acerca de</a>
+            <a routerLink="/experiencia" (click)="showMenuButton()" (click)="hideMenu()">Experiencia</a>
+            <a routerLink="/educacion" (click)="showMenuButton()" (click)="hideMenu()">Educación</a>
+            <a routerLink="/proyectos" class="navegacion" (click)="showMenuButton()" (click)="hideMenu()">Proyectos</a>
+            <i class="fas fa-times" id="cerrar" (click)="showMenuButton()" (click)="hideMenu()"></i>
+        </nav>
+    </div>
+    <div [ngStyle]="{'backgroundImage': 'url(' + url + ')'}" class="banner"></div>
+</header>

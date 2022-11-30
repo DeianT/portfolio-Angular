@@ -1,0 +1,20 @@
+<section class="contenedor">
+    <h2>Proyectos</h2>
+
+    <div class="proyectos">
+        <div class="proyecto" *ngFor="let proyecto of proyectos">
+            <a [href]="proyecto.link">
+                <img [src]="proyecto.imagen" alt="Img-Proyecto" class="imagen-proyecto">
+                <h3 class="proyecto-nombre">{{proyecto.nombre}}</h3>
+                <p class="">{{proyecto.descripcion}}</p>
+            </a>
+        </div>
+        <div class="proyecto">
+            bienes raices
+            task list
+            ¿juegos unity?
+            ¿blog cafe?
+            boton ver todos
+        </div>
+    </div>
+</section><!--Proyectos-->

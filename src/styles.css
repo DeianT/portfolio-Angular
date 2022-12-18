@@ -78,8 +78,9 @@ nav a{
     font-weight: 600;
     padding-top: 1rem;
 }
-.logo{
+.logo img{
     margin-left: 2rem;
+    width: 15rem;
 }
 
 .banner{
@@ -121,6 +122,7 @@ nav a{
 .foto-perfil{
     border-radius: 50%;
     display: inline-block;
+    max-width: 26rem;
 }
 
 .descripcion{
@@ -176,10 +178,6 @@ nav a{
 }
 
 /* Experiencia */
-.seccion-exp{
-    
-}
-
 .experiencia{
     background-color: bisque;
     border-radius: 20px;

@@ -8,7 +8,6 @@ html {
 body{
     font-family: Verdana;
     font-size: 1.8rem;
-    /* background-color: aliceblue; */
     background: rgb(227,249,255);
     background: -moz-linear-gradient(180deg, rgba(227,249,255,1) 15%, rgba(240,248,255,1) 66%, rgba(245,234,255,1) 100%);
     background: -webkit-linear-gradient(180deg, rgba(227,249,255,1) 15%, rgba(240,248,255,1) 66%, rgba(245,234,255,1) 100%);
@@ -68,7 +67,7 @@ h3{
 
 /* Header/nav */
 .barra{
-    background-color: rgb(180, 180, 180);
+    /* background-color: rgb(180, 180, 180); */
     text-align: center;
 }
 nav a{
@@ -110,12 +109,12 @@ nav a{
 .presentacion{
     margin-top: 2rem;
     padding: 0 1rem;
-    background-color: darkgray;
-    background: rgb(170,164,151);
-    background: -moz-linear-gradient(135deg, rgba(170,164,151,1) 17%, rgba(209,207,196,1) 92%);
-    background: -webkit-linear-gradient(135deg, rgba(170,164,151,1) 17%, rgba(209,207,196,1) 92%);
-    background: linear-gradient(135deg, rgba(170,164,151,1) 17%, rgba(209,207,196,1) 92%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#aaa497",endColorstr="#d1cfc4",GradientType=1);
+    /* background-color: darkgray; */
+    /* background: rgb(170,164,151); */
+    /* background: -moz-linear-gradient(135deg, rgba(170,164,151,1) 17%, rgba(209,207,196,1) 92%); */
+    /* background: -webkit-linear-gradient(135deg, rgba(170,164,151,1) 17%, rgba(209,207,196,1) 92%); */
+    /* background: linear-gradient(135deg, rgba(170,164,151,1) 17%, rgba(209,207,196,1) 92%); */
+    /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#aaa497",endColorstr="#d1cfc4",GradientType=1); */
 }
 
 .foto-perfil{

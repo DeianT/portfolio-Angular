@@ -25,7 +25,15 @@ export class AutenticacionService {
     }))
   }
 
+  logOut(){
+    sessionStorage.removeItem('current');
+  }
+
   get UsuarioAutenticado(){
     return this.currentUserSubject.value;
+  }
+
+  public get logIn():boolean{
+    return sessionStorage.getItem('current') !== null;
   }
 }

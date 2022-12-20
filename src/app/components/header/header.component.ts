@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import { DatosService } from 'src/app/services/datos.service';
 
 @Component({
@@ -10,7 +11,7 @@ export class HeaderComponent implements OnInit {
   miPortfolio:any;
   url:string = "";
 
-  constructor(private datos:DatosService) { }
+  constructor(private datos:DatosService, public authService: AutenticacionService) { }
 
   ngOnInit(): void {
     this.datos.getData('personas').subscribe(data => {//pasar "personas" como parámetro
@@ -46,5 +47,9 @@ export class HeaderComponent implements OnInit {
     if (mobileMenu == null)
       return;
     mobileMenu.style.maxHeight = '80vh';
+  }
+
+  logout(){
+    this.authService.logOut();
   }
 }

@@ -9,8 +9,8 @@
             <a routerLink="/educacion">Educación</a>
             <a routerLink="/proyectos">Proyectos</a>
             <!--En los 4 botones borré las funciones porque no quedaba bien con una pantalla ancha-->
-            <a routerLink="/iniciar-sesion">Login</a>
-            <a routerLink="#">Logout</a>
+            <a routerLink="/iniciar-sesion" *ngIf="!authService.logIn">Login</a>
+            <a routerLink="#" *ngIf="authService.logIn" (click)="logout()">Logout</a>
             <i class="fas fa-times" id="cerrar" (click)="showMenuButton()" (click)="hideMenu()"></i>
         </nav>
     </div>

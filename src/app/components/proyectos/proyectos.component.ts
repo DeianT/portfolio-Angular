@@ -7,15 +7,13 @@ import { DatosService } from 'src/app/services/datos.service';
   styleUrls: ['./proyectos.component.css']
 })
 export class ProyectosComponent implements OnInit {
-  miPortfolio:any;
   proyectos:any;
 
   constructor(private datos:DatosService) { }
 
   ngOnInit(): void {
-    this.datos.getData().subscribe(data => {
-      this.miPortfolio = data;
-      this.proyectos = data.proyectos;
+    this.datos.getData('proyectos').subscribe(data => {
+      this.proyectos = data;
     })
   }
 }

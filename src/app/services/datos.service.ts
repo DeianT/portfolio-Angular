@@ -6,11 +6,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DatosService {
-  url: string = 'localhost:8080/api';//url de la api donde tengo los datos (la que estoy haciendo con spring y jpa)
+  url: string = 'http://localhost:8080/';//url de la api donde tengo los datos
 
   constructor(private http:HttpClient) { }
 
-  getData():Observable<any>{//pasar como parámetro string /persona /educacion etc desde cada componente
-    return this.http.get(this.url);//acá pongo la url
+  getData(mapping: String):Observable<any>{//pasar como parámetro /persona /educacion etc desde cada componente
+    return this.http.get(this.url + mapping + '/traer');
   }
 }

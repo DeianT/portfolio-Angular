@@ -13,9 +13,9 @@ export class HeaderComponent implements OnInit {
   constructor(private datos:DatosService) { }
 
   ngOnInit(): void {
-    this.datos.getData().subscribe(data => {
-      this.miPortfolio = data;
-      this.url = data.bannerBackground;
+    this.datos.getData('personas').subscribe(data => {//pasar "personas" como parámetro
+      this.miPortfolio = data[0];
+      this.url = this.miPortfolio.url_banner;
     });
   }
 
@@ -33,7 +33,6 @@ export class HeaderComponent implements OnInit {
     mobileMenu.style.maxHeight = '0'; //esto lo rompe cuando la pantalla es mas de 768px de ancha
     if (screen.availWidth < 768){
     }
-    console.log(screen.availWidth)
   }
 
   hideMenuButton(): void{

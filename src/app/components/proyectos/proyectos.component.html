@@ -3,7 +3,7 @@
 
     <div class="proyectos">
         <div class="proyecto" *ngFor="let proyecto of proyectos">
-            <a [href]="proyecto.link">
+            <a [href]="proyecto.link" target="_blank">
                 <img [src]="proyecto.imagen" alt="Img-Proyecto" class="imagen-proyecto">
                 <h3 class="proyecto-nombre">{{proyecto.nombre}}</h3>
                 <p class="">{{proyecto.descripcion}}</p>

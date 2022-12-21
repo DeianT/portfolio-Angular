@@ -11,9 +11,12 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DatosService } from './services/datos.service';
 import { InterceptorService } from './services/interceptor.service';
+import { AddEducacionComponent } from './components/add-educacion/add-educacion.component';
+import { AddExperienciaComponent } from './components/add-experiencia/add-experiencia.component';
+import { AddProyectoComponent } from './components/add-proyecto/add-proyecto.component';
 
 const appRoutes:Routes = [
   {path:'portfolio', component: PresentacionComponent},
@@ -33,13 +36,17 @@ const appRoutes:Routes = [
     ProyectosComponent,
     FooterComponent,
     ExperienciaComponent,
-    IniciarSesionComponent
+    IniciarSesionComponent,
+    AddEducacionComponent,
+    AddExperienciaComponent,
+    AddProyectoComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(appRoutes, {enableTracing:true}),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [DatosService,
     {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true}],

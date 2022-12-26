@@ -8,7 +8,7 @@
                 <h3 class="proyecto-nombre">{{proyecto.nombre}}</h3>
                 <p class="">{{proyecto.descripcion}}</p>
             </a>
-            <i *ngIf="autenticacion.logIn" class="fas fa-times" (click)="delete(proyecto.id)"></i>
+            <i *ngIf="autenticacion.logIn" class="fas fa-times delete" (click)="delete(proyecto.id)"></i>
         </div>
         <div class="proyecto">
             bienes raices

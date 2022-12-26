@@ -17,6 +17,8 @@ import { InterceptorService } from './services/interceptor.service';
 import { AddEducacionComponent } from './components/add-educacion/add-educacion.component';
 import { AddExperienciaComponent } from './components/add-experiencia/add-experiencia.component';
 import { AddProyectoComponent } from './components/add-proyecto/add-proyecto.component';
+import { AddHabilidadComponent } from './components/add-habilidad/add-habilidad.component';
+import { EditPresentacionComponent } from './components/edit-presentacion/edit-presentacion.component';
 
 const appRoutes:Routes = [
   {path:'portfolio', component: PresentacionComponent},
@@ -39,7 +41,9 @@ const appRoutes:Routes = [
     IniciarSesionComponent,
     AddEducacionComponent,
     AddExperienciaComponent,
-    AddProyectoComponent
+    AddProyectoComponent,
+    AddHabilidadComponent,
+    EditPresentacionComponent
   ],
   imports: [
     BrowserModule,

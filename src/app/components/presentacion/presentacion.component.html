@@ -14,11 +14,15 @@
             <li><a [href]="miPortfolio.github" target="_blank"><i class="fa-brands fa-github"></i>GitHub</a></li>
         </ul>
     </div>
+    <app-edit-presentacion *ngIf="autenticacion.logIn"></app-edit-presentacion>
 </main><!--Main-->
 
 <section class="contenedor">
     <h2>Habilidades</h2>
     <ul>
-        <li *ngFor="let hab of habilidades">{{hab.nombre}}</li>
+        <li *ngFor="let hab of habilidades">{{hab.nombre}}
+            <i *ngIf="autenticacion.logIn" class="fas fa-times delete" (click)="delete(hab.id)"></i>
+        </li>
     </ul>
+    <app-add-habilidad *ngIf="autenticacion.logIn"></app-add-habilidad>
 </section>

@@ -1,23 +1,23 @@
-<form class="add-form" (ngSubmit)="onSubmit()" >
+<form (ngSubmit)="onSubmit()" >
     <div class="form-control">
         <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" id="nombre" placeholder="Nombre" [(ngModel)]="nombre">
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre" [(ngModel)]="nombre" class="campo">
     </div>
     
     <div class="form-control">
         <label for="descripcion">Descripcion</label>
-        <input type="text" name="descripcion" id="descripcion" placeholder="Descripcion" [(ngModel)]="descripcion">
+        <input type="text" name="descripcion" id="descripcion" placeholder="Descripcion" [(ngModel)]="descripcion" class="campo">
     </div>
 
     <div class="form-control">
         <label for="link">Link</label>
-        <input type="text" name="link" id="link" placeholder="Link" [(ngModel)]="link">
+        <input type="text" name="link" id="link" placeholder="Link" [(ngModel)]="link" class="campo">
     </div>
     
     <div class="form-control">
         <label for="url_img">Url Imagen</label>
-        <input type="text" name="url_img" id="url_img" placeholder="Url Imagen" [(ngModel)]="url_img">
+        <input type="text" name="url_img" id="url_img" placeholder="Url Imagen" [(ngModel)]="url_img" class="campo">
     </div>
 
-    <input type="submit" value="Guardar" class="btn btn-block">
+    <input type="submit" value="Guardar" class="boton">
 </form>

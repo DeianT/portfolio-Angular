@@ -1,0 +1,53 @@
+<form (ngSubmit)="onSubmit(persona.id)" >
+    <div class="form-control">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre" value="{{persona.nombre}}" [(ngModel)]="nombre" class="campo">
+    </div>
+
+    <!-- <div class="form-control">
+        <label for="fecha_nac">Fecha de Nacimiento</label>
+        <input type="date" name="fecha_nac" id="fecha_nac" placeholder="Fecha de Nacimiento" [(ngModel)]="fecha_nac">
+    </div> -->
+
+    <div class="form-control">
+        <label for="acerca_de">Acerca de</label>
+        <input type="text" name="acerca_de" id="acerca_de" placeholder="Acerca de" [(ngModel)]="acerca_de" class="campo">
+    </div>
+
+    <div class="form-control">
+        <label for="correo">Correo</label>
+        <input type="text" name="correo" id="correo" placeholder="Correo" [(ngModel)]="correo" class="campo">
+    </div>
+    
+    <div class="form-control">
+        <label for="instagram">Instagram</label>
+        <input type="text" name="instagram" id="instagram" placeholder="Instagram" [(ngModel)]="instagram" class="campo">
+    </div>
+
+    <div class="form-control">
+        <label for="linkedin">LinkedIn</label>
+        <input type="text" name="linkedin" id="linkedin" placeholder="LinkedIn" [(ngModel)]="linkedin" class="campo">
+    </div>
+
+    <div class="form-control">
+        <label for="github">GitHub</label>
+        <input type="text" name="github" id="github" placeholder="GitHub" [(ngModel)]="github" class="campo">
+    </div>
+
+    <div class="form-control">
+        <label for="url_foto">URL Foto</label>
+        <input type="text" name="url_foto" id="url_foto" placeholder="URL Foto" [(ngModel)]="url_foto" class="campo">
+    </div>
+
+    <div class="form-control">
+        <label for="url_logo">URL Logo</label>
+        <input type="text" name="url_logo" id="url_logo" placeholder="URL Logo" [(ngModel)]="url_logo" class="campo">
+    </div>
+
+    <div class="form-control">
+        <label for="url_banner">URL Banner</label>
+        <input type="text" name="url_banner" id="url_banner" placeholder="URL Banner" [(ngModel)]="url_banner" class="campo">
+    </div>
+
+    <input type="submit" value="Guardar" class="boton">
+</form>

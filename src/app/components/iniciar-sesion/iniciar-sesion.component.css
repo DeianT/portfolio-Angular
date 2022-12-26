@@ -1,22 +1,5 @@
-.contacto{
-    margin-top: 2rem;
-}
-label{
-    display: inline-block;
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-}
 .campo{
-    position: relative;
-    background-color: #ececec;
-    margin-bottom: 2.5rem;
-    border-style: hidden;
-    border-radius: 1rem;
-    padding: 1rem;
-}
-.campo:focus{
-    outline: none;
+    margin: 0 0 2.5rem;
 }
 fieldset{
     border: none;
@@ -38,32 +21,6 @@ fieldset{
     background-size: contain;
     display: inline-block;
 } */
-
-.boton{
-    color: rgb(255, 255, 255);
-    font-weight: 700;
-    text-decoration: none;
-    margin: 2rem auto 0;
-    font-size: 1.8rem;
-    padding: 1rem 0;
-    text-align: center;
-    border-style: hidden;
-    display: block;
-    width: 90%;
-    background-color: rgb(80, 120, 255);
-    border-radius: 0.4rem;
-}
-@media (min-width: 768px){
-    .boton{
-        display: inline-block;
-        padding: 1rem 3rem;
-        max-width: fit-content;
-        margin-left: 2rem;
-    }
-}
-.boton:hover{
-    cursor: pointer;
-}
 
 .error{
     color: red;

@@ -5,7 +5,7 @@
         <h3 class="exp-nombre">{{ed.nombre}}</h3>
         <p class="fecha">{{ed.inicio}} - {{ed.fin}}</p>
         <p class="exp-descripcion">{{ed.descripcion}}</p>
-        <i *ngIf="autenticacion.logIn" class="fas fa-times" (click)="delete(ed.id)"></i>
+        <i *ngIf="autenticacion.logIn" class="fas fa-times delete" (click)="delete(ed.id)"></i>
     </div>
     <app-add-educacion *ngIf="autenticacion.logIn"></app-add-educacion>
 </section><!--Educacion-->

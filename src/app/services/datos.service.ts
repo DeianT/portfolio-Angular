@@ -1,4 +1,4 @@
-import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -26,5 +26,11 @@ export class DatosService {
 
   deleteData(direction: string, id:number):Observable<any>{
     return this.http.delete(this.url + direction + '/borrar/' + id);
+  }
+
+  editData(direction: string, id: number, params:HttpParams):Observable<any>{
+    console.log(`${this.url}${direction}/editar/${id}?${params.toString()}`)
+    return this.http.put(`${this.url}${direction}/editar/${id}?${params.toString()}`, null);
+  
   }
 }

@@ -1,0 +1,33 @@
+.campo{
+    margin: 0 0 2.5rem;
+}
+fieldset{
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* .check{
+    padding: 0.35rem 0.75rem 0.625rem;
+}
+.checkbox{
+    width: 2rem;
+    height: 2rem;
+    margin: 0.25rem 1rem;
+    vertical-align: top;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: inline-block;
+} */
+
+.error{
+    color: red;
+}
+.is-valid{
+    border: 3px green solid;
+}
+.is-invalid{
+    border: 3px red solid;
+}

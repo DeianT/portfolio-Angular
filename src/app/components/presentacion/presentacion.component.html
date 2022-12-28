@@ -1,24 +1,28 @@
 <main class="presentacion" id="presentacion">
-    <img [src]="miPortfolio.fotoPerfil" alt="" class="foto-perfil">
+    <img [src]="miPortfolio.url_foto" alt="" class="foto-perfil">
     
     <div class="descripcion">
         <h1 class="nombre">{{miPortfolio.nombre}}</h1>
-        <p class="acerca-de">{{miPortfolio.acercaDe[0]}} <br> {{miPortfolio.acercaDe[1]}}</p>
+        <p class="acerca-de">{{miPortfolio.acerca_de}}</p>
     </div>
 
     <div class="contacto contenedor">
         <ul>
-            <li><a href="#"><i class="fa-solid fa-envelope"></i>Gmail</a></li>
-            <li><a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
-            <li><a href="#"><i class="fa-brands fa-linkedin"></i>LinkedIn</a></li>
-            <li><a href="#"><i class="fa-brands fa-github"></i>GitHub</a></li>
+            <li><a [href]="'mailto:' + miPortfolio.correo" target="_blank"><i class="fa-solid fa-envelope"></i>Gmail</a></li>
+            <li><a [href]="miPortfolio.instagram" target="_blank"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+            <li><a [href]="miPortfolio.linkedin" target="_blank"><i class="fa-brands fa-linkedin"></i>LinkedIn</a></li>
+            <li><a [href]="miPortfolio.github" target="_blank"><i class="fa-brands fa-github"></i>GitHub</a></li>
         </ul>
     </div>
+    <app-edit-presentacion *ngIf="autenticacion.logIn"></app-edit-presentacion>
 </main><!--Main-->
 
 <section class="contenedor">
     <h2>Habilidades</h2>
     <ul>
-        <li *ngFor="let hab of habilidades">{{hab}}</li>
+        <li *ngFor="let hab of habilidades">{{hab.nombre}}
+            <i *ngIf="autenticacion.logIn" class="fas fa-times delete" (click)="delete(hab.id)"></i>
+        </li>
     </ul>
+    <app-add-habilidad *ngIf="autenticacion.logIn"></app-add-habilidad>
 </section>

@@ -4,10 +4,11 @@
     <div class="proyectos">
         <div class="proyecto" *ngFor="let proyecto of proyectos">
             <a [href]="proyecto.link" target="_blank">
-                <img [src]="proyecto.imagen" alt="Img-Proyecto" class="imagen-proyecto">
+                <img [src]="proyecto.url_img" alt="Img-Proyecto" class="imagen-proyecto">
                 <h3 class="proyecto-nombre">{{proyecto.nombre}}</h3>
                 <p class="">{{proyecto.descripcion}}</p>
             </a>
+            <i *ngIf="autenticacion.logIn" class="fas fa-times delete" (click)="delete(proyecto.id)"></i>
         </div>
         <div class="proyecto">
             bienes raices
@@ -17,4 +18,5 @@
             boton ver todos
         </div>
     </div>
+    <app-add-proyecto *ngIf="autenticacion.logIn"></app-add-proyecto>
 </section><!--Proyectos-->

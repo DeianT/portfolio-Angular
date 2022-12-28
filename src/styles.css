@@ -40,6 +40,13 @@ h3{
     font-size: 2.6rem;
 }
 
+.delete{
+    background-color: red;
+    padding: 0.1rem 0.4rem;
+    border-radius: 25%;
+    cursor: pointer;
+}
+
 /* Mobile Menu */
 #mobile-menu, #cerrar{
     color: black;
@@ -77,12 +84,12 @@ nav a{
     font-weight: 600;
     padding-top: 1rem;
 }
-.logo{
+.logo img{
     margin-left: 2rem;
+    width: 15rem;
 }
 
 .banner{
-    /* background-image: url(assets/img/2016-12-05_20.01.40.png); */
     background-position: center center;
     background-size: cover;
     height: 80vh;
@@ -120,6 +127,7 @@ nav a{
 .foto-perfil{
     border-radius: 50%;
     display: inline-block;
+    max-width: 26rem;
 }
 
 .descripcion{
@@ -175,10 +183,6 @@ nav a{
 }
 
 /* Experiencia */
-.seccion-exp{
-    
-}
-
 .experiencia{
     background-color: bisque;
     border-radius: 20px;
@@ -247,7 +251,7 @@ nav a{
     }
     .proyecto{
         flex-basis: calc(33.3% - 1rem);
-        margin-bottom: 0;
+        /* margin-bottom: 0; */
     }
     .imagen-proyecto{
         width: calc(100%);
@@ -290,4 +294,51 @@ footer p{
         display: flex;
         justify-content: space-evenly;
     }
+}
+
+/* Formularios */
+form{
+    margin-top: 2rem;
+}
+label{
+    display: inline-block;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+.campo{
+    position: relative;
+    background-color: #ececec;
+    margin: 0 0 1rem 1rem;
+    border-style: hidden;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.campo:focus{
+    outline: none;
+}
+.boton{
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    text-decoration: none;
+    margin: 2rem auto 0;
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    text-align: center;
+    border-style: hidden;
+    display: block;
+    width: 90%;
+    background-color: rgb(80, 120, 255);
+    border-radius: 0.4rem;
+}
+@media (min-width: 768px){
+    .boton{
+        display: inline-block;
+        padding: 1rem 3rem;
+        max-width: fit-content;
+        margin-left: 2rem;
+    }
+}
+.boton:hover{
+    cursor: pointer;
 }

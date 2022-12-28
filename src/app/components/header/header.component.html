@@ -1,13 +1,16 @@
 <header>
     <div class="barra">
-        <a href="/" class="logo"><img [src]="miPortfolio.logo" alt="logo"></a>
+        <a href="/" class="logo"><img [src]="miPortfolio.url_logo" alt="logo"></a>
 
         <i class="fas fa-ellipsis-v" id="mobile-menu" (click)="hideMenuButton()" (click)="showMenu()"></i>
         <nav id="nav" class="navegacion-principal">
-            <a routerLink="/" (click)="showMenuButton()" (click)="hideMenu()">Acerca de</a>
-            <a routerLink="/experiencia" (click)="showMenuButton()" (click)="hideMenu()">Experiencia</a>
-            <a routerLink="/educacion" (click)="showMenuButton()" (click)="hideMenu()">Educación</a>
-            <a routerLink="/proyectos" class="navegacion" (click)="showMenuButton()" (click)="hideMenu()">Proyectos</a>
+            <a routerLink="/">Acerca de</a>
+            <a routerLink="/experiencia">Experiencia</a>
+            <a routerLink="/educacion">Educación</a>
+            <a routerLink="/proyectos">Proyectos</a>
+            <!--En los 4 botones borré las funciones porque no quedaba bien con una pantalla ancha-->
+            <a routerLink="/iniciar-sesion" *ngIf="!authService.logIn">Login</a>
+            <a routerLink="#" *ngIf="authService.logIn" (click)="logout()">Logout</a>
             <i class="fas fa-times" id="cerrar" (click)="showMenuButton()" (click)="hideMenu()"></i>
         </nav>
     </div>

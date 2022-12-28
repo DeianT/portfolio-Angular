@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import { DatosService } from 'src/app/services/datos.service';
 
 @Component({
@@ -10,12 +11,12 @@ export class HeaderComponent implements OnInit {
   miPortfolio:any;
   url:string = "";
 
-  constructor(private datos:DatosService) { }
+  constructor(private datos:DatosService, public authService: AutenticacionService) { }
 
   ngOnInit(): void {
-    this.datos.getData().subscribe(data => {
-      this.miPortfolio = data;
-      this.url = data.bannerBackground;
+    this.datos.getData('personas').subscribe(data => {//pasar "personas" como parámetro
+      this.miPortfolio = data[0];
+      this.url = this.miPortfolio.url_banner;
     });
   }
 
@@ -33,7 +34,6 @@ export class HeaderComponent implements OnInit {
     mobileMenu.style.maxHeight = '0'; //esto lo rompe cuando la pantalla es mas de 768px de ancha
     if (screen.availWidth < 768){
     }
-    console.log(screen.availWidth)
   }
 
   hideMenuButton(): void{
@@ -47,5 +47,9 @@ export class HeaderComponent implements OnInit {
     if (mobileMenu == null)
       return;
     mobileMenu.style.maxHeight = '80vh';
+  }
+
+  logout(){
+    this.authService.logOut();
   }
 }

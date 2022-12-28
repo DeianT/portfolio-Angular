@@ -91,7 +91,6 @@ nav a{
 }
 
 .banner{
-    /* background-image: url(assets/img/2016-12-05_20.01.40.png); */
     background-position: center center;
     background-size: cover;
     height: 80vh;
@@ -253,7 +252,7 @@ nav a{
     }
     .proyecto{
         flex-basis: calc(33.3% - 1rem);
-        margin-bottom: 0;
+        /* margin-bottom: 0; */
     }
     .imagen-proyecto{
         width: calc(100%);

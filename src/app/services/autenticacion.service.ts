@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AutenticacionService {
-  url = "https://reqres.in/api/login";//url de la api. ¿Qué api? No tengo idea
+  url = "http://localhost:8080/auth";//url de la api
   currentUserSubject: BehaviorSubject<any>;
 
   constructor(private http:HttpClient) { 
@@ -17,7 +17,6 @@ export class AutenticacionService {
   }
 
   IniciarSesion(credenciales: any):Observable<any>{
-    // console.log("iniciarsesion");
     return this.http.post(this.url, credenciales).pipe(map(data => {
       sessionStorage.setItem('current', JSON.stringify(data));
       this.currentUserSubject.next(data);

@@ -14,13 +14,8 @@ export class IniciarSesionComponent implements OnInit {
   constructor(private formBuilder:FormBuilder, private authService:AutenticacionService, private ruta:Router) 
   { 
     this.form = this.formBuilder.group({
-      email:['', [Validators.required, Validators.email]],
-      password:['', [Validators.required, Validators.minLength(8)]],
-      deviceInfo:this.formBuilder.group({
-        deviceId:[""],
-        deviceType:[""],//no tengo idea de donde sacar estas tres cosas
-        notificationToken:[""]//capaz no las necesito
-      })
+      username:['', [Validators.required, Validators.email]],
+      password:['', [Validators.required, Validators.minLength(8)]]
     });
   }
 
@@ -28,7 +23,7 @@ export class IniciarSesionComponent implements OnInit {
   }
 
   get Email(){
-    return this.form.get('email');
+    return this.form.get('username');
   }
 
   get Password(){
@@ -36,7 +31,6 @@ export class IniciarSesionComponent implements OnInit {
   }
 
   onEnviar(event:Event){
-    // console.log(this.form.value);
     event.preventDefault;
     this.authService.IniciarSesion(this.form.value).subscribe(data =>{
       console.log('DATA: ' + JSON.stringify(data));

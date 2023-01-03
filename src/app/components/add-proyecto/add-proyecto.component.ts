@@ -21,5 +21,6 @@ export class AddProyectoComponent implements OnInit {
     const {nombre, descripcion, link, url_img} = this;
     const proyecto = {nombre, descripcion, link, url_img};
     this.datos.addData('proyectos', proyecto).subscribe();
+    window.location.reload()
   }
 }

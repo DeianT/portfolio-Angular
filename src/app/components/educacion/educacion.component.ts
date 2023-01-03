@@ -19,7 +19,7 @@ export class EducacionComponent implements OnInit {
   }
 
   delete(id: number){
-    console.log(id);
     this.datos.deleteData('educacion', id).subscribe();
+    window.location.reload()
   }
 }

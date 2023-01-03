@@ -21,5 +21,6 @@ export class ExperienciaComponent implements OnInit {
 
   delete(id:number){
     this.datos.deleteData(this.direction, id).subscribe();
+    window.location.reload()
   }
 }

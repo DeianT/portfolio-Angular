@@ -24,13 +24,6 @@ export class PresentacionComponent implements OnInit {
 
   delete(id:number){
     this.datos.deleteData('habilidades', id).subscribe();
-    // window.location.reload();
-    // window.location.href = window.location.href;
-    // window.location = window.location;
-    this.datos.getData('habilidades').subscribe(data => {
-      this.habilidades = data;
-    });
-    setTimeout(() => window.location.reload());
-    // window.location.reload();
+    window.location.reload();
   }
 }

@@ -32,12 +32,9 @@ export class EditPresentacionComponent implements OnInit {
 
   onSubmit(id: number){
     const {nombre, acerca_de, correo, instagram, linkedin, github, url_foto, url_logo, url_banner} = this;
-    // const persona = {nombre, fecha_nac, acerca_de, correo, instagram, linkedin, github, url_foto, url_logo, url_banner};
-    // console.log(persona);
 
     const params = new HttpParams()
     .set("nombre", nombre)
-    // .set("fecha_nac", fecha_nac.toJSON())
     .set("acerca_de", acerca_de)
     .set("correo", correo)
     .set("instagram", instagram)
@@ -47,7 +44,7 @@ export class EditPresentacionComponent implements OnInit {
     .set("url_logo", url_logo)
     .set("url_banner", url_banner);
     
-    // console.log(params.get("fecha_nac"));
     this.datos.editData('personas', id, params).subscribe();
+    window.location.reload()
   }
 }

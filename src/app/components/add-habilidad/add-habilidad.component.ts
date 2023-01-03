@@ -19,8 +19,6 @@ export class AddHabilidadComponent implements OnInit {
     const {nombre} = this;
     const habilidad = {nombre};
     this.datos.addData('habilidades', habilidad).subscribe();
-    // history.go(0);
-    // window.location.assign('/');
-    this.router.navigate(['/proyectos']);
+    window.location.reload()
   }
 }

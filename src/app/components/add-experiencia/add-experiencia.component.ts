@@ -22,5 +22,6 @@ export class AddExperienciaComponent implements OnInit {
     const {empresa, puesto, descripcion, inicio, fin} = this;
     const experiencia = {empresa, puesto, descripcion, inicio, fin};
     this.datos.addData('experiencia', experiencia).subscribe();
+    window.location.reload()
   }
 }

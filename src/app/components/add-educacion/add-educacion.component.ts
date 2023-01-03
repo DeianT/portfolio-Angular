@@ -23,14 +23,10 @@ export class AddEducacionComponent implements OnInit {
   }
 
   onSubmit(){
-    if(this.fin === ""){
-      // this.fin = "Actualidad";
-    }
     const {nombre, inicio, fin, descripcion} = this;
     const educacion = {nombre, inicio, fin, descripcion};
     
     this.datos.addData('educacion', educacion).subscribe();
-    this.ruta.navigate(['/']);
-    this.ruta.navigate(['/educacion']);
+    window.location.reload()
   }
 }

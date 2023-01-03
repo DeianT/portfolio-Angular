@@ -31,7 +31,7 @@ export class HeaderComponent implements OnInit {
     if (mobileMenu == null)
       return;
       
-    mobileMenu.style.maxHeight = '0'; //esto lo rompe cuando la pantalla es mas de 768px de ancha
+    mobileMenu.style.maxHeight = '0';
     if (screen.availWidth < 768){
     }
   }

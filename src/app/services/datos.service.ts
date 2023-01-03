@@ -12,7 +12,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class DatosService {
-  url: string = 'http://localhost:8080/';//url de la api donde tengo los datos
+  url: string = 'https://portfoliobackend-4s6x.onrender.com/';//url de la api donde tengo los datos
 
   constructor(private http:HttpClient) { }
 
@@ -31,6 +31,5 @@ export class DatosService {
   editData(direction: string, id: number, params:HttpParams):Observable<any>{
     console.log(`${this.url}${direction}/editar/${id}?${params.toString()}`)
     return this.http.put(`${this.url}${direction}/editar/${id}?${params.toString()}`, null);
-  
   }
 }

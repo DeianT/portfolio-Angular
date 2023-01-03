@@ -1,8 +1,8 @@
 {
-    "logo": "https://www.concordia.gob.ar/sites/all/themes/programar/images/arg-programa.png",
-    "bannerBackground": "../../../assets/img/2016-12-05_20.01.40.png",
+    "logo": "../../../assets/img/Logo.png",
+    "bannerBackground": "../../../assets/img/Banner_Portfolio.jpg",
 
-    "fotoPerfil": "https://pps.whatsapp.net/v/t61.24694-24/262630486_955346535412651_2984070173042011065_n.jpg?ccb=11-4&oh=01_AdRe9UbAS7h16AKYbQNXmsf9ZzkNCDD4imD7X6kQPht-KQ&oe=63A858CA",
+    "fotoPerfil": "../../../assets/img/Foto.jpg",
     "nombre": "Deian Teze",
     "acercaDe": [
         "Desarrollador web",

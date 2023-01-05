@@ -11,7 +11,7 @@ export class EditPresentacionComponent implements OnInit {
   persona:any;
 
   nombre = "";
-  // fecha_nac:Date = new Date();
+  fecha_nac:string = "";
   acerca_de:string = "";
   correo:string = "";
   instagram:string = "";
@@ -31,10 +31,11 @@ export class EditPresentacionComponent implements OnInit {
   }
 
   onSubmit(id: number){
-    const {nombre, acerca_de, correo, instagram, linkedin, github, url_foto, url_logo, url_banner} = this;
+    const {nombre, fecha_nac, acerca_de, correo, instagram, linkedin, github, url_foto, url_logo, url_banner} = this;
 
     const params = new HttpParams()
     .set("nombre", nombre)
+    .set("fecha_nac", fecha_nac)
     .set("acerca_de", acerca_de)
     .set("correo", correo)
     .set("instagram", instagram)

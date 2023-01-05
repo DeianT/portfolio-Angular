@@ -10,8 +10,8 @@ export class AddExperienciaComponent implements OnInit {
   empresa:string = "";
   puesto: string = "";
   descripcion:string = "";
-  inicio: number | undefined;
-  fin: number|undefined;
+  inicio: string = "";
+  fin: string = "";
 
   constructor(private datos:DatosService) { }
 

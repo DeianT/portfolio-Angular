@@ -29,7 +29,6 @@ export class DatosService {
   }
 
   editData(direction: string, id: number, params:HttpParams):Observable<any>{
-    console.log(`${this.url}${direction}/editar/${id}?${params.toString()}`)
     return this.http.put(`${this.url}${direction}/editar/${id}?${params.toString()}`, null);
   }
 }

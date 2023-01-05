@@ -20,7 +20,7 @@ export class InterceptorService implements HttpInterceptor{
         }
       })
     }
-    console.log("interceptor " + JSON.stringify(currentUser));
+
     return next.handle(req);
   }
 }

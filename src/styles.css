@@ -68,7 +68,7 @@ h3{
         display: none!important;
     }
     .navegacion-principal{
-        max-height: unset;
+        max-height: unset!important;
     }
 }
 
@@ -89,7 +89,7 @@ nav a{
 }
 
 .banner{
-    background-position: center center;
+    background-position: left center;
     background-size: cover;
     height: 80vh;
 }
@@ -220,9 +220,6 @@ nav a{
     margin-bottom: 1rem;
     border-radius: 5px;
     background-color: rgb(240, 252, 255);
-}
-.proyecto:last-of-type{
-    margin-bottom: 0;
 }
 
 .imagen-proyecto{

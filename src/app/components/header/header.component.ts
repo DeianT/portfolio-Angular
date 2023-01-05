@@ -30,16 +30,13 @@ export class HeaderComponent implements OnInit {
     const mobileMenu: HTMLElement | null = document.getElementById('nav');
     if (mobileMenu == null)
       return;
-      
     mobileMenu.style.maxHeight = '0';
-    if (screen.availWidth < 768){
-    }
   }
 
   hideMenuButton(): void{
     const menuButton: HTMLElement | null = document.getElementById('mobile-menu');
     if (menuButton == null)
-        return;
+      return;
     menuButton.style.display = 'none';
   }
   showMenu(){

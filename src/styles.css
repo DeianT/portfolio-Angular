@@ -169,9 +169,10 @@ nav a{
 }
 
 @media (min-width: 768px) {
-    .contacto li{
-        display: inline-block;
-        margin-right: 2rem;
+    .contacto ul{
+        display: flex;
+        justify-content: space-evenly;
+        padding-left: 0;
     }
 }
 
@@ -244,22 +245,6 @@ nav a{
     }
     .imagen-proyecto{
         width: calc(100%);
-    }
-}
-
-.fijo{
-    position: fixed;
-    right: 1rem;
-    bottom: 1rem;
-    background-color: rgb(220, 176, 0);
-    padding: 1rem;
-    border-radius: 5px;
-    font-size: 2.6rem;
-    color: white;
-}
-@media (min-width: 768px) {
-    .fijo{
-        padding: 1rem 1.52rem;
     }
 }
 

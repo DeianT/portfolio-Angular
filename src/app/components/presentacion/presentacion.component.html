@@ -8,10 +8,10 @@
 
     <div class="contacto contenedor">
         <ul>
-            <li><a [href]="'mailto:' + miPortfolio.correo" target="_blank"><i class="fa-solid fa-envelope"></i>Gmail</a></li>
-            <li><a [href]="miPortfolio.instagram" target="_blank"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
-            <li><a [href]="miPortfolio.linkedin" target="_blank"><i class="fa-brands fa-linkedin"></i>LinkedIn</a></li>
-            <li><a [href]="miPortfolio.github" target="_blank"><i class="fa-brands fa-github"></i>GitHub</a></li>
+            <li *ngIf="miPortfolio.correo.trim() !== ''"><a [href]="'mailto:' + miPortfolio.correo" target="_blank"><i class="fa-solid fa-envelope"></i>Gmail</a></li>
+            <li *ngIf="miPortfolio.instagram.trim() !== ''"><a [href]="miPortfolio.instagram" target="_blank"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+            <li *ngIf="miPortfolio.linkedin.trim() !== ''"><a [href]="miPortfolio.linkedin" target="_blank"><i class="fa-brands fa-linkedin"></i>LinkedIn</a></li>
+            <li *ngIf="miPortfolio.github.trim() !== ''"><a [href]="miPortfolio.github" target="_blank"><i class="fa-brands fa-github"></i>GitHub</a></li>
         </ul>
     </div>
     <app-edit-presentacion *ngIf="autenticacion.logIn"></app-edit-presentacion>

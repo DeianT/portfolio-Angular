@@ -32,14 +32,15 @@ export class EditEducacionComponent implements OnInit, OnChanges {
       return;
     
     const params = new HttpParams()
-    .set("nombre", this.educacionAEditar.nombre)
-    .set("descripcion", this.educacionAEditar.descripcion)
-    .set("inicio", this.educacionAEditar.inicio)
-    .set("fin", this.educacionAEditar.fin)
+    .set("nombre", this.nombre)
+    .set("descripcion", this.descripcion)
+    .set("inicio", this.inicio)
+    .set("fin", this.fin)
     .set("persona_id", 2)
 
     this.datos.editData('educacion', this.educacionAEditar.id, params).subscribe();
-    console.log(this.educacionAEditar);
+    console.log("og: ", this.educacionAEditar);
+    console.log("nueva: ", params.toString());
     // window.location.reload()
     this.educacionAEditar = null;
   }

@@ -9,7 +9,7 @@
         <p *ngIf="autenticacion.logIn" class="boton" (click)="edit(ed)">Editar</p>
     </div>
     
-    <div *ngIf="autenticacion.logIn" style="display: flex; justify-content: space-evenly;">
+    <div *ngIf="autenticacion.logIn" class="agregar-editar">
         <app-add-educacion></app-add-educacion>
         <app-edit-educacion [educacionAEditar]="aEditar"></app-edit-educacion>
     </div>

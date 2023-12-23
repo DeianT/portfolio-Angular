@@ -11,6 +11,6 @@
     
     <div *ngIf="autenticacion.logIn" style="display: flex; justify-content: space-evenly;">
         <app-add-educacion></app-add-educacion>
-        <app-edit-educacion></app-edit-educacion>
+        <app-edit-educacion [educacionAEditar]="aEditar"></app-edit-educacion>
     </div>
 </section><!--Educacion-->

@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { DatosService } from 'src/app/services/datos.service';
-import { EducacionComponent } from '../educacion/educacion.component';
 import { HttpParams } from '@angular/common/http';
 
 @Component({
@@ -8,8 +7,8 @@ import { HttpParams } from '@angular/common/http';
   templateUrl: './edit-educacion.component.html',
   styleUrls: ['./edit-educacion.component.css']
 })
-export class EditEducacionComponent implements OnInit {
-  educacion: any;
+export class EditEducacionComponent implements OnInit, OnChanges {
+  @Input() educacionAEditar: any;
 
   id: number = 0;
   nombre: string = "";
@@ -21,35 +20,35 @@ export class EditEducacionComponent implements OnInit {
 
   constructor(private datos:DatosService) { }
 
+  ngOnChanges(changes: SimpleChanges): void {
+    this.asignarDatos();
+  }
+
   ngOnInit(): void {
   }
 
   onSubmit(){
-    if(this.id == 0)
+    if(this.educacionAEditar == null)
       return;
     
     const params = new HttpParams()
-    .set("nombre", this.nombre)
-    .set("descripcion", this.descripcion)
-    .set("inicio", this.inicio)
-    .set("fin", this.fin)
+    .set("nombre", this.educacionAEditar.nombre)
+    .set("descripcion", this.educacionAEditar.descripcion)
+    .set("inicio", this.educacionAEditar.inicio)
+    .set("fin", this.educacionAEditar.fin)
     .set("persona_id", 2)
 
-    // this.datos.editData('educacion', this.id, params).subscribe();
-    //no puede acceder porque es estatico
-    // console.log(educacion);
+    this.datos.editData('educacion', this.educacionAEditar.id, params).subscribe();
+    console.log(this.educacionAEditar);
     // window.location.reload()
+    this.educacionAEditar = null;
   }
 
-  static editar(ed: any){
-    console.log('editar')
-
-    // this.id = ed.id;
-    // this.nombre = ed.nombre;
-    // this.inicio = ed.inicio;
-    // this.fin = ed.fin;
-    // this.descripcion = ed.descripcion;
-    
-    //no puede acceder porque es estatico
+  asignarDatos(): void{
+    this.id = this.educacionAEditar.id;
+    this.nombre = this.educacionAEditar.nombre;
+    this.inicio = this.educacionAEditar.inicio;
+    this.fin = this.educacionAEditar.fin;
+    this.descripcion = this.educacionAEditar.descripcion;
   }
 }

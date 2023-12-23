@@ -1,4 +1,3 @@
-import { HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import { DatosService } from 'src/app/services/datos.service';
@@ -10,6 +9,7 @@ import { DatosService } from 'src/app/services/datos.service';
 })
 export class EducacionComponent implements OnInit {
   educacion: any;
+  aEditar: any;
 
   constructor(private datos:DatosService, public autenticacion: AutenticacionService) { }
 
@@ -25,7 +25,6 @@ export class EducacionComponent implements OnInit {
   }
 
   edit(ed: any){
-    console.log(ed.nombre, ed.descripcion);
-    // EditEducacionComponent.editar(ed);
+    this.aEditar = ed;
   }
 }

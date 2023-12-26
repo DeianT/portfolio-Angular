@@ -38,8 +38,8 @@ export class EditExperienciaComponent implements OnInit {
       .set("fin", this.fin)
       .set("persona_id", 2)
 
-      // this.datos.editData('experiencia', this.expAEditar.id, params).subscribe();
-      // window.location.reload()
+      this.datos.editData('experiencia', this.expAEditar.id, params).subscribe();
+      window.location.reload()
 
       this.expAEditar = null
   }

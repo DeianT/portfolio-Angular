@@ -21,6 +21,7 @@ import { AddHabilidadComponent } from './components/add-habilidad/add-habilidad.
 import { EditPresentacionComponent } from './components/edit-presentacion/edit-presentacion.component';
 import { EditEducacionComponent } from './components/edit-educacion/edit-educacion.component';
 import { EditExperienciaComponent } from './components/edit-experiencia/edit-experiencia.component';
+import { EditProyectoComponent } from './components/edit-proyecto/edit-proyecto.component';
 
 const appRoutes:Routes = [
   {path:'portfolio', component: PresentacionComponent},
@@ -47,7 +48,8 @@ const appRoutes:Routes = [
     AddHabilidadComponent,
     EditPresentacionComponent,
     EditEducacionComponent,
-    EditExperienciaComponent
+    EditExperienciaComponent,
+    EditProyectoComponent
   ],
   imports: [
     BrowserModule,

@@ -36,7 +36,7 @@ export class EditProyectoComponent implements OnInit {
     .set("url_img", this.url_img)
     .set("persona_id", 2)
 
-    // this.datos.editData('proyectos', this.id, params).subscribe();
+    this.datos.editData('proyectos', this.id, params).subscribe();
     window.location.reload()
 
     this.proyectoAEditar = null;

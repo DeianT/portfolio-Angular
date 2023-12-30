@@ -10,6 +10,7 @@ import { DatosService } from 'src/app/services/datos.service';
 export class ExperienciaComponent implements OnInit {
   experiencia: any;
   direction: string = 'experiencia';
+  aEditar: any;
 
   constructor(private datos:DatosService, public autenticacion:AutenticacionService) { }
 
@@ -22,5 +23,9 @@ export class ExperienciaComponent implements OnInit {
   delete(id:number){
     this.datos.deleteData(this.direction, id).subscribe();
     window.location.reload()
+  }
+
+  edit(ed: any){
+    this.aEditar = ed;
   }
 }

@@ -9,6 +9,7 @@ import { DatosService } from 'src/app/services/datos.service';
 })
 export class EducacionComponent implements OnInit {
   educacion: any;
+  aEditar: any;
 
   constructor(private datos:DatosService, public autenticacion: AutenticacionService) { }
 
@@ -21,5 +22,9 @@ export class EducacionComponent implements OnInit {
   delete(id: number){
     this.datos.deleteData('educacion', id).subscribe();
     window.location.reload()
+  }
+
+  edit(ed: any){
+    this.aEditar = ed;
   }
 }

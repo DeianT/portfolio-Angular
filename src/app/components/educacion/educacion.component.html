@@ -6,6 +6,11 @@
         <p class="fecha">{{ed.inicio}} - {{ed.fin}}</p>
         <p class="exp-descripcion">{{ed.descripcion}}</p>
         <i *ngIf="autenticacion.logIn" class="fas fa-times delete" (click)="delete(ed.id)"></i>
+        <p *ngIf="autenticacion.logIn" class="boton" (click)="edit(ed)">Editar</p>
     </div>
-    <app-add-educacion *ngIf="autenticacion.logIn"></app-add-educacion>
+    
+    <div *ngIf="autenticacion.logIn" class="agregar-editar">
+        <app-add-educacion></app-add-educacion>
+        <app-edit-educacion [educacionAEditar]="aEditar"></app-edit-educacion>
+    </div>
 </section><!--Educacion-->

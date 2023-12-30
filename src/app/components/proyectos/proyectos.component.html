@@ -9,7 +9,12 @@
                 <p class="">{{proyecto.descripcion}}</p>
             </a>
             <i *ngIf="autenticacion.logIn" class="fas fa-times delete" (click)="delete(proyecto.id)"></i>
+            <p *ngIf="autenticacion.logIn" class="boton" (click)="edit(proyecto)">Editar</p>
         </div>
     </div>
-    <app-add-proyecto *ngIf="autenticacion.logIn"></app-add-proyecto>
+
+    <div *ngIf="autenticacion.logIn" class="agregar-editar">
+        <app-add-proyecto></app-add-proyecto>
+        <app-edit-proyecto [proyectoAEditar]="aEditar"></app-edit-proyecto>
+    </div>
 </section><!--Proyectos-->

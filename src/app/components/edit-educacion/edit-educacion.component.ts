@@ -1,0 +1,55 @@
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { DatosService } from 'src/app/services/datos.service';
+import { HttpParams } from '@angular/common/http';
+
+@Component({
+  selector: 'app-edit-educacion',
+  templateUrl: './edit-educacion.component.html',
+  styleUrls: ['./edit-educacion.component.css']
+})
+export class EditEducacionComponent implements OnInit, OnChanges {
+  @Input() educacionAEditar: any;
+
+  id: number = 0;
+  nombre: string = "";
+  inicio: string = "";
+  fin: string = "";
+  descripcion:string = "";
+
+  showAddForm:boolean = false;
+
+  constructor(private datos:DatosService) { }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    this.asignarDatos();
+  }
+
+  ngOnInit(): void {
+  }
+
+  onSubmit(){
+    if(this.educacionAEditar == null)
+      return;
+    
+    const params = new HttpParams()
+    .set("nombre", this.nombre)
+    .set("descripcion", this.descripcion)
+    .set("inicio", this.inicio)
+    .set("fin", this.fin)
+    .set("persona_id", 2)
+
+    this.datos.editData('educacion', this.educacionAEditar.id, params).subscribe();
+    console.log("og: ", this.educacionAEditar);
+    console.log("nueva: ", params.toString());
+    // window.location.reload()
+    this.educacionAEditar = null;
+  }
+
+  asignarDatos(): void{
+    this.id = this.educacionAEditar.id;
+    this.nombre = this.educacionAEditar.nombre;
+    this.inicio = this.educacionAEditar.inicio;
+    this.fin = this.educacionAEditar.fin;
+    this.descripcion = this.educacionAEditar.descripcion;
+  }
+}

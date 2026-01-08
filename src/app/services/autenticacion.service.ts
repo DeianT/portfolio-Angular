@@ -24,6 +24,7 @@ export class AutenticacionService {
 
   logOut(){
     sessionStorage.removeItem('current');
+    this.currentUserSubject = new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('current') || '{}'));
   }
 
   get UsuarioAutenticado(){

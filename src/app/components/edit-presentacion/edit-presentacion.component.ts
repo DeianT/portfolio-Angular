@@ -3,9 +3,10 @@ import { Component, OnInit } from '@angular/core';
 import { DatosService } from 'src/app/services/datos.service';
 
 @Component({
-  selector: 'app-edit-presentacion',
-  templateUrl: './edit-presentacion.component.html',
-  styleUrls: ['./edit-presentacion.component.css']
+    selector: 'app-edit-presentacion',
+    templateUrl: './edit-presentacion.component.html',
+    styleUrls: ['./edit-presentacion.component.css'],
+    standalone: false
 })
 export class EditPresentacionComponent implements OnInit {
   persona:any;

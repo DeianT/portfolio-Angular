@@ -3,9 +3,10 @@ import { DatosService } from 'src/app/services/datos.service';
 import { HttpParams } from '@angular/common/http';
 
 @Component({
-  selector: 'app-edit-educacion',
-  templateUrl: './edit-educacion.component.html',
-  styleUrls: ['./edit-educacion.component.css']
+    selector: 'app-edit-educacion',
+    templateUrl: './edit-educacion.component.html',
+    styleUrls: ['./edit-educacion.component.css'],
+    standalone: false
 })
 export class EditEducacionComponent implements OnInit, OnChanges {
   @Input() educacionAEditar: any;

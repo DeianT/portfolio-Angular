@@ -4,9 +4,10 @@ import { Router } from '@angular/router';
 import { AutenticacionService } from 'src/app/services/autenticacion.service';
 
 @Component({
-  selector: 'app-iniciar-sesion',
-  templateUrl: './iniciar-sesion.component.html',
-  styleUrls: ['./iniciar-sesion.component.css']
+    selector: 'app-iniciar-sesion',
+    templateUrl: './iniciar-sesion.component.html',
+    styleUrls: ['./iniciar-sesion.component.css'],
+    standalone: false
 })
 export class IniciarSesionComponent implements OnInit {
   form:FormGroup;

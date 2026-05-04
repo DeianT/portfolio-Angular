@@ -3,9 +3,10 @@ import { Router } from '@angular/router';
 import { DatosService } from 'src/app/services/datos.service';
 
 @Component({
-  selector: 'app-add-habilidad',
-  templateUrl: './add-habilidad.component.html',
-  styleUrls: ['./add-habilidad.component.css']
+    selector: 'app-add-habilidad',
+    templateUrl: './add-habilidad.component.html',
+    styleUrls: ['./add-habilidad.component.css'],
+    standalone: false
 })
 export class AddHabilidadComponent implements OnInit {
   nombre: string = "";

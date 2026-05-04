@@ -3,9 +3,10 @@ import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import { DatosService } from 'src/app/services/datos.service';
 
 @Component({
-  selector: 'app-proyectos',
-  templateUrl: './proyectos.component.html',
-  styleUrls: ['./proyectos.component.css']
+    selector: 'app-proyectos',
+    templateUrl: './proyectos.component.html',
+    styleUrls: ['./proyectos.component.css'],
+    standalone: false
 })
 export class ProyectosComponent implements OnInit {
   proyectos:any;

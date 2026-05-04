@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { DatosService } from 'src/app/services/datos.service';
 
 @Component({
-  selector: 'app-add-proyecto',
-  templateUrl: './add-proyecto.component.html',
-  styleUrls: ['./add-proyecto.component.css']
+    selector: 'app-add-proyecto',
+    templateUrl: './add-proyecto.component.html',
+    styleUrls: ['./add-proyecto.component.css'],
+    standalone: false
 })
 export class AddProyectoComponent implements OnInit {
   nombre:string = "";

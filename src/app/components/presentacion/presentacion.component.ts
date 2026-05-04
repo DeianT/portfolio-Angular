@@ -3,9 +3,10 @@ import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import { DatosService } from 'src/app/services/datos.service';
 
 @Component({
-  selector: 'app-presentacion',
-  templateUrl: './presentacion.component.html',
-  styleUrls: ['./presentacion.component.css']
+    selector: 'app-presentacion',
+    templateUrl: './presentacion.component.html',
+    styleUrls: ['./presentacion.component.css'],
+    standalone: false
 })
 export class PresentacionComponent implements OnInit {
   miPortfolio: any;

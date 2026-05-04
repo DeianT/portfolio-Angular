@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { DatosService } from 'src/app/services/datos.service';
 
 @Component({
-  selector: 'app-add-educacion',
-  templateUrl: './add-educacion.component.html',
-  styleUrls: ['./add-educacion.component.css']
+    selector: 'app-add-educacion',
+    templateUrl: './add-educacion.component.html',
+    styleUrls: ['./add-educacion.component.css'],
+    standalone: false
 })
 export class AddEducacionComponent implements OnInit {
 

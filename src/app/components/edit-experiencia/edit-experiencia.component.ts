@@ -3,9 +3,10 @@ import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 import { DatosService } from 'src/app/services/datos.service';
 
 @Component({
-  selector: 'app-edit-experiencia',
-  templateUrl: './edit-experiencia.component.html',
-  styleUrls: ['./edit-experiencia.component.css']
+    selector: 'app-edit-experiencia',
+    templateUrl: './edit-experiencia.component.html',
+    styleUrls: ['./edit-experiencia.component.css'],
+    standalone: false
 })
 export class EditExperienciaComponent implements OnInit {
   @Input() expAEditar: any;

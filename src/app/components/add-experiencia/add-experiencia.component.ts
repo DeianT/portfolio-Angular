@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { DatosService } from 'src/app/services/datos.service';
 
 @Component({
-  selector: 'app-add-experiencia',
-  templateUrl: './add-experiencia.component.html',
-  styleUrls: ['./add-experiencia.component.css']
+    selector: 'app-add-experiencia',
+    templateUrl: './add-experiencia.component.html',
+    styleUrls: ['./add-experiencia.component.css'],
+    standalone: false
 })
 export class AddExperienciaComponent implements OnInit {
   empresa:string = "";

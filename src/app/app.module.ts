@@ -1,6 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClient, HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -32,34 +32,27 @@ const appRoutes:Routes = [
   {path:'', redirectTo:'portfolio', pathMatch:'full'}
 ]
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    PresentacionComponent,
-    EducacionComponent,
-    ProyectosComponent,
-    FooterComponent,
-    ExperienciaComponent,
-    IniciarSesionComponent,
-    AddEducacionComponent,
-    AddExperienciaComponent,
-    AddProyectoComponent,
-    AddHabilidadComponent,
-    EditPresentacionComponent,
-    EditEducacionComponent,
-    EditExperienciaComponent,
-    EditProyectoComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    RouterModule.forRoot(appRoutes, {enableTracing:true}),
-    ReactiveFormsModule,
-    FormsModule
-  ],
-  providers: [DatosService,
-    {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true}],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        HeaderComponent,
+        PresentacionComponent,
+        EducacionComponent,
+        ProyectosComponent,
+        FooterComponent,
+        ExperienciaComponent,
+        IniciarSesionComponent,
+        AddEducacionComponent,
+        AddExperienciaComponent,
+        AddProyectoComponent,
+        AddHabilidadComponent,
+        EditPresentacionComponent,
+        EditEducacionComponent,
+        EditExperienciaComponent,
+        EditProyectoComponent
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        RouterModule.forRoot(appRoutes, { enableTracing: true }),
+        ReactiveFormsModule,
+        FormsModule], providers: [DatosService,
+        { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true }, provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
